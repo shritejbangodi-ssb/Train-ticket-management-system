@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Karnataka Railways – Book Ticket</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <button id="logoutBtn" class="btn-logout">Logout</button>
+
+<div class="page">
+  <div class="booking-card">
+
+   <div class="booking-header">
+  <h2>Book Your Journey</h2>
+
+  <div class="header-actions">
+    <button id="viewBookingsBtn" class="btn-outline">View My Bookings</button>
+   
+  </div>
+</div>
+
+
+    <!-- FORM -->
+    <form id="bookingForm" class="booking-form">
+
+      <div class="row-2">
+        <input id="passengerName" type="text" placeholder="Passenger Name" required>
+        <input id="age" type="number" placeholder="Age" min="1" required>
+      </div>
+
+      <div class="row-2">
+        <select id="fromStation" required></select>
+        <select id="toStation" required></select>
+      </div>
+
+      <div class="row-2">
+        <select id="reservationType" required>
+          <option value="">Reservation Type</option>
+          <option value="AC">AC</option>
+          <option value="Sleeper">Sleeper</option>
+          <option value="Passenger">Passenger</option>
+        </select>
+        <input id="travelDate" type="date" required>
+      </div>
+
+      <div class="fare-row">
+        <button type="button" id="calculateFareBtn" class="btn-outline">
+          Calculate Fare
+        </button>
+        <div id="fareResult" class="fare-box"></div>
+      </div>
+
+      <button type="button" id="bookBtn" class="btn-primary big">
+        Book Ticket
+      </button>
+
+    </form>
+
+    <!-- BOOKINGS PANEL -->
+    <div id="myBookings" class="bookings-panel" style="display:none;">
+      <h3>My Bookings</h3>
+      <p id="bookingCount"></p>
+      <div id="bookingList"></div>
+    </div>
+
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
